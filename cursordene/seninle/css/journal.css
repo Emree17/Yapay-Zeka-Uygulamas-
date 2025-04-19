@@ -1,0 +1,676 @@
+/* Günlük Sayfası Stilleri */
+
+/* Ana günlük alanı */
+.journal-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: calc(100vh - 200px);
+    background-color: var(--light-color);
+}
+
+/* Kullanıcı menü stili */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-avatar span {
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    width: 200px;
+    z-index: 100;
+    padding: 10px 0;
+    display: none;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul li {
+    padding: 8px 15px;
+    transition: var(--transition);
+}
+
+.dropdown-menu ul li:hover {
+    background-color: var(--light-grey);
+}
+
+.dropdown-menu ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu ul li a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Günlük Container Layout */
+.journal-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* Sidebar Stili */
+.journal-sidebar {
+    background-color: var(--light-grey);
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.date-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.current-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.calendar-toggle {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.calendar-toggle:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.coach-selection {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.coach-selection h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.coach-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.coach-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.coach-option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.coach-option.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.coach-option img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.journal-history {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.journal-history h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.history-list li {
+    padding: 10px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.history-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-date {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.history-emotions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.emotion-tag {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 30px;
+    color: white;
+}
+
+.emotion-tag.happy {
+    background-color: #4caf50; /* Yeşil */
+}
+
+.emotion-tag.anxious {
+    background-color: #ff9800; /* Turuncu */
+}
+
+.emotion-tag.stressed {
+    background-color: #f44336; /* Kırmızı */
+}
+
+.emotion-tag.tired {
+    background-color: #795548; /* Kahverengi */
+}
+
+.emotion-tag.calm {
+    background-color: #2196f3; /* Mavi */
+}
+
+.emotion-tag.inspired {
+    background-color: #9c27b0; /* Mor */
+}
+
+.toggle-input-mode {
+    display: flex;
+    gap: 10px;
+}
+
+.input-mode-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-mode-btn i {
+    margin-right: 8px;
+}
+
+.input-mode-btn:hover {
+    background-color: var(--light-grey);
+}
+
+.input-mode-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Günlük Yazma Alanı */
+.journal-main {
+    padding: 30px;
+}
+
+.journal-input-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-prompt {
+    margin-bottom: 20px;
+}
+
+.journal-prompt p {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.journal-textarea-wrapper {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+#journal-text {
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid var(--light-grey);
+    border-radius: var(--border-radius);
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    outline: none;
+    transition: var(--transition);
+}
+
+#journal-text:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2);
+}
+
+.journal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* Ses Kayıt Alanı */
+.voice-record-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.voice-prompt {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.voice-prompt p {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.voice-record-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#start-recording {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+#start-recording:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+#start-recording.recording {
+    animation: pulse 1.5s infinite;
+    background-color: #f44336;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.record-status {
+    font-size: 1rem;
+    color: var(--grey-color);
+}
+
+.voice-preview {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.voice-preview p {
+    margin-bottom: 15px;
+    color: var(--grey-color);
+}
+
+.voice-text-preview {
+    padding: 15px;
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    min-height: 150px;
+    text-align: left;
+    color: var(--dark-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+/* Analiz Sonuçları */
+.analysis-results {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.analysis-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analysis-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.close-analysis {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.analysis-content {
+    padding: 30px;
+}
+
+.emotions-chart {
+    margin-bottom: 30px;
+}
+
+.emotions-chart h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.chart-container {
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.placeholder-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emotion-bar {
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: white;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.emotion-bar.happy {
+    background-color: #4caf50;
+}
+
+.emotion-bar.anxious {
+    background-color: #ff9800;
+}
+
+.emotion-bar.sad {
+    background-color: #f44336;
+}
+
+.emotion-bar.calm {
+    background-color: #2196f3;
+}
+
+.analysis-summary {
+    margin-bottom: 30px;
+}
+
+.analysis-summary h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.analysis-summary p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--grey-color);
+}
+
+.coach-response {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+}
+
+.coach-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.coach-message {
+    flex: 1;
+}
+
+.coach-message h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.coach-message p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--grey-color);
+}
+
+.mindfulness-exercise h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.exercise-card {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.exercise-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(106, 90, 205, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.exercise-content {
+    flex: 1;
+}
+
+.exercise-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.exercise-content p {
+    margin-bottom: 15px;
+    color: var(--grey-color);
+}
+
+.btn-sm {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .journal-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .journal-sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .coach-options {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .coach-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .coach-response {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .exercise-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .journal-actions {
+        flex-direction: column;
+    }
+    
+    .journal-actions button {
+        width: 100%;
+    }
+}
+
+/* Yükleme Animasyonu */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    font-size: 50px;
+    color: #6c5ce7;
+    margin-bottom: 20px;
+}
+
+.loading-spinner i {
+    animation: spin 1s infinite linear;
+}
+
+.loading-message {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

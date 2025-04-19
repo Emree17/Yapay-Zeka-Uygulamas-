@@ -1,0 +1,240 @@
+/* Demo Sayfası CSS Stilleri */
+
+/* Demo Banner */
+.demo-banner {
+    background-color: #ffebd1;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffe0b0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.demo-banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.demo-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.demo-message i {
+    color: #ff7e00;
+    font-size: 20px;
+}
+
+.demo-message p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.demo-message a {
+    color: #ff7e00;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timer i {
+    color: #ff7e00;
+}
+
+.timer span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Demo Özellikler Listesi */
+.demo-features {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.demo-features h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.demo-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.demo-features ul li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.demo-features ul li i.fa-check {
+    color: #2ecc71;
+}
+
+.demo-features ul li i.fa-times {
+    color: #ccc;
+}
+
+.demo-features ul li.disabled {
+    color: #999;
+}
+
+/* Demo CTA Bölümü */
+.demo-cta {
+    background-color: #f1f9ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px dashed #90c4f4;
+}
+
+.demo-cta p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+.demo-cta .btn {
+    font-weight: 600;
+}
+
+/* Demo Analiz Notu */
+.demo-analysis-note {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    border-left: 3px solid #ff7e00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.demo-analysis-note p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.demo-analysis-note i {
+    color: #ff7e00;
+    margin-right: 5px;
+}
+
+/* Karanlık Mod için Stiller */
+.dark-mode .demo-banner {
+    background-color: #2d3748;
+    border-bottom: 1px solid #374151;
+}
+
+.dark-mode .demo-message i,
+.dark-mode .demo-message a {
+    color: #f59e0b;
+}
+
+.dark-mode .demo-message p {
+    color: #e2e8f0;
+}
+
+.dark-mode .timer {
+    background-color: #1a202c;
+}
+
+.dark-mode .timer i {
+    color: #f59e0b;
+}
+
+.dark-mode .timer span {
+    color: #e2e8f0;
+}
+
+.dark-mode .demo-features {
+    background-color: #1a202c;
+}
+
+.dark-mode .demo-features h3 {
+    color: #e2e8f0;
+    border-bottom-color: #374151;
+}
+
+.dark-mode .demo-features ul li:not(.disabled) {
+    color: #e2e8f0;
+}
+
+.dark-mode .demo-features ul li.disabled {
+    color: #718096;
+}
+
+.dark-mode .demo-cta {
+    background-color: #2d3748;
+    border-color: #4a5568;
+}
+
+.dark-mode .demo-cta p {
+    color: #e2e8f0;
+}
+
+.dark-mode .demo-analysis-note {
+    background-color: #2d3748;
+    border-left-color: #f59e0b;
+}
+
+.dark-mode .demo-analysis-note p {
+    color: #e2e8f0;
+}
+
+.dark-mode .demo-analysis-note i {
+    color: #f59e0b;
+}
+
+/* Mobil Görünüm */
+@media (max-width: 768px) {
+    .demo-banner .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .demo-message {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .timer {
+        margin-bottom: 5px;
+    }
+    
+    .demo-features {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .demo-cta, 
+    .demo-analysis-note {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+} 

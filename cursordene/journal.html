@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günlüğüm | Seninle - AI Yaşam Koçu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Seninle</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="journal.html" class="active">Günlüğüm</a></li>
+                <li><a href="progress.html">İlerleme</a></li>
+                <li><a href="exercises.html">Egzersizler</a></li>
+            </ul>
+            <div class="user-menu">
+                <button class="btn-emergency">
+                    <i class="fas fa-heartbeat"></i> Acil Destek
+                </button>
+                <div class="user-profile">
+                    <img src="images/user-avatar.jpg" alt="Kullanıcı Profili">
+                    <span>Merhaba, Kullanıcı</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="journal-page">
+        <div class="container">
+            <div class="journal-header">
+                <div class="date-selector">
+                    <button class="btn-date-nav" id="prev-date">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="current-date">
+                        <h2 id="current-date">18 Mayıs 2023, Perşembe</h2>
+                    </div>
+                    <button class="btn-date-nav" id="next-date">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="journal-actions">
+                    <button class="btn btn-voice-record">
+                        <i class="fas fa-microphone"></i> Sesli Kayıt
+                    </button>
+                    <div class="coach-selector">
+                        <span>Koçun:</span>
+                        <select id="coach-select">
+                            <option value="compassionate">Şefkatli</option>
+                            <option value="disciplined">Disiplinli</option>
+                            <option value="humorous">Mizahi</option>
+                            <option value="spiritual">Spiritüel</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="journal-content">
+                <div class="writing-section">
+                    <div class="writing-prompt">
+                        <p>Bugün nasıl hissediyorsun? Düşüncelerini, duygularını ve deneyimlerini paylaş.</p>
+                    </div>
+                    <div class="editor-container">
+                        <textarea id="journal-editor" placeholder="Yazmaya başla..."></textarea>
+                        <div class="word-count">0 kelime</div>
+                    </div>
+                    <div class="editor-actions">
+                        <button class="btn btn-secondary" id="save-draft">
+                            <i class="fas fa-save"></i> Taslak Olarak Kaydet
+                        </button>
+                        <button class="btn btn-primary" id="analyze-journal">
+                            <i class="fas fa-chart-pie"></i> Analiz Et
+                        </button>
+                    </div>
+                </div>
+
+                <div class="analysis-section" id="analysis-section">
+                    <h3>Duygu Analizi</h3>
+                    <div class="analysis-loading">
+                        <div class="spinner"></div>
+                        <p>Yazın analiz ediliyor...</p>
+                    </div>
+                    
+                    <div class="analysis-results" style="display: none;">
+                        <div class="emotion-summary">
+                            <h4>Bugün hissettiğin duygular</h4>
+                            <p id="emotion-text">Bugün biraz stresli ancak aynı zamanda umutlu görünüyorsun.</p>
+                        </div>
+                        
+                        <div class="emotion-chart">
+                            <h4>Duygu Dağılımı</h4>
+                            <div class="chart-container">
+                                <canvas id="emotions-chart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="coach-feedback">
+                            <div class="coach-avatar">
+                                <img src="images/coach1.png" alt="Şefkatli Koç" id="coach-avatar">
+                            </div>
+                            <div class="coach-message">
+                                <h4><span id="coach-name">Şefkatli Koç</span> diyor ki:</h4>
+                                <p id="coach-feedback">Kendini stresli hissetmen çok doğal. Yaşadığın zorluklar karşısında gösterdiğin dayanıklılık takdire değer. Belki bugün kendine biraz daha nazik davranmak için zaman ayırabilirsin. Bu geçici bir durum ve her şey zamanla daha iyi olacak.</p>
+                                <div class="quote">
+                                    <p id="motivation-quote">"Fırtınalı denizler en iyi denizcileri yetiştirir."</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recommended-exercise">
+                            <h4>Bugün İçin Önerilen Egzersiz</h4>
+                            <div class="exercise-card">
+                                <div class="exercise-icon">
+                                    <i class="fas fa-wind"></i>
+                                </div>
+                                <div class="exercise-details">
+                                    <h5 id="exercise-title">5 Dakikalık Nefes Egzersizi</h5>
+                                    <p id="exercise-description">Sakin bir yerde otur ve gözlerini kapat. 4 saniye nefes al, 4 saniye tut ve 6 saniye ver. Bu ritmi 5 dakika boyunca sürdür.</p>
+                                    <button class="btn btn-exercise" id="start-exercise">Egzersizi Başlat</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="common-themes">
+                            <h4>Yazında Geçen Temalar</h4>
+                            <div class="themes-container" id="themes-container">
+                                <span class="theme-tag">iş</span>
+                                <span class="theme-tag">aile</span>
+                                <span class="theme-tag">stres</span>
+                                <span class="theme-tag">gelecek</span>
+                                <span class="theme-tag">umut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="voice-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sesli Günlük</h2>
+            <div class="voice-recorder">
+                <div class="recorder-animation">
+                    <div class="recorder-visualization">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <p class="record-status">Kayda başlamak için butona tıkla</p>
+                <div class="record-controls">
+                    <button class="btn btn-record" id="start-recording">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="btn btn-stop" id="stop-recording" disabled>
+                        <i class="fas fa-stop"></i>
+                    </button>
+                </div>
+                <div class="record-timer">00:00</div>
+                <div class="record-actions" style="display: none;">
+                    <button class="btn btn-secondary" id="discard-recording">
+                        <i class="fas fa-trash"></i> İptal Et
+                    </button>
+                    <button class="btn btn-primary" id="use-recording">
+                        <i class="fas fa-check"></i> Kullan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="emergency-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Acil Duygusal Destek</h2>
+            <div class="emergency-options">
+                <div class="emergency-message">
+                    <p>Şu an zor bir an yaşadığını görüyorum. Nasıl yardımcı olabilirim?</p>
+                </div>
+                <div class="emergency-buttons">
+                    <button class="btn emergency-option" data-option="anxiety">
+                        <i class="fas fa-brain"></i>
+                        <span>Anksiyete yaşıyorum</span>
+                    </button>
+                    <button class="btn emergency-option" data-option="stress">
+                        <i class="fas fa-bolt"></i>
+                        <span>Çok stres altındayım</span>
+                    </button>
+                    <button class="btn emergency-option" data-option="sadness">
+                        <i class="fas fa-cloud-rain"></i>
+                        <span>Üzgün hissediyorum</span>
+                    </button>
+                    <button class="btn emergency-option" data-option="anger">
+                        <i class="fas fa-fire"></i>
+                        <span>Öfkeliyim</span>
+                    </button>
+                </div>
+                <div class="emergency-response" style="display: none;">
+                    <h3 id="emergency-title">Anksiyete İçin Hızlı Destek</h3>
+                    <div class="emergency-content">
+                        <p id="emergency-text">Hemen şimdi, 4-7-8 nefes tekniğini deneyelim. 4 saniye boyunca burnundan nefes al, 7 saniye tut ve 8 saniye boyunca ağzından ver. Bunu birkaç kez tekrarla.</p>
+                        <div class="emergency-exercise" id="emergency-exercise">
+                            <div class="breath-animation">
+                                <div class="circle"></div>
+                                <p class="breath-instruction">Nefes al</p>
+                            </div>
+                            <button class="btn btn-primary" id="start-emergency-exercise">Hemen Başlat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="exercise-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-exercise-title">5 Dakikalık Nefes Egzersizi</h2>
+            <div class="exercise-modal-content">
+                <div class="exercise-timer">
+                    <div class="timer-display">
+                        <span id="minutes">05</span>:<span id="seconds">00</span>
+                    </div>
+                    <div class="timer-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="exercise-instructions">
+                    <div class="current-instruction" id="current-instruction">
+                        <p>Rahat bir pozisyonda otur ve gözlerini kapat</p>
+                    </div>
+                    <div class="breath-animation exercise-breath">
+                        <div class="circle"></div>
+                        <p class="breath-instruction">Hazırlan</p>
+                    </div>
+                </div>
+                <div class="exercise-controls">
+                    <button class="btn btn-secondary" id="pause-exercise">
+                        <i class="fas fa-pause"></i> Duraklat
+                    </button>
+                    <button class="btn btn-danger" id="stop-exercise">
+                        <i class="fas fa-times"></i> Bitir
+                    </button>
+                </div>
+            </div>
+            <div class="exercise-complete" style="display: none;">
+                <div class="complete-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Egzersiz Tamamlandı!</h3>
+                <p>Harika iş çıkardın! Nasıl hissediyorsun?</p>
+                <div class="mood-feedback">
+                    <button class="mood-btn" data-mood="better">
+                        <i class="fas fa-smile"></i>
+                        <span>Daha İyi</span>
+                    </button>
+                    <button class="mood-btn" data-mood="same">
+                        <i class="fas fa-meh"></i>
+                        <span>Aynı</span>
+                    </button>
+                    <button class="mood-btn" data-mood="worse">
+                        <i class="fas fa-frown"></i>
+                        <span>Daha Kötü</span>
+                    </button>
+                </div>
+                <button class="btn btn-primary" id="complete-exercise">
+                    Tamamla
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-dropdown" id="user-dropdown">
+        <ul>
+            <li><a href="profile.html"><i class="fas fa-user"></i> Profil</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Ayarlar</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Yardım</a></li>
+            <li><a href="index.html" id="logout"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Seninle</h2>
+                <p>AI Yaşam Koçu ve Günlük Terapist</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Ürün</h3>
+                    <ul>
+                        <li><a href="index.html#features">Özellikler</a></li>
+                        <li><a href="index.html#about">Nasıl Çalışır</a></li>
+                        <li><a href="#">Fiyatlandırma</a></li>
+                        <li><a href="#">SSS</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Şirket</h3>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="index.html#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Yasal</h3>
+                    <ul>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Koşulları</a></li>
+                        <li><a href="#">Çerez Politikası</a></li>
+                        <li><a href="#">KVKK</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Seninle. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/journal.js"></script>
+</body>
+</html> 

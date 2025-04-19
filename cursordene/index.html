@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seninle - AI Yaşam Koçu ve Günlük Terapist</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Seninle</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#testimonials">Yorumlar</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn btn-login">Giriş Yap</button>
+                <button class="btn btn-signup">Kayıt Ol</button>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Kendi hikayeni yapay zeka koçunla birlikte yaz</h1>
+                <p>Seninle, günlük yazma ve duygusal gelişimi destekleyen AI destekli kişisel yaşam koçun ve günlük terapistin.</p>
+                <button class="btn btn-primary">Hemen Başla</button>
+                <button class="btn btn-secondary">Daha Fazla Bilgi</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.png" alt="Seninle AI Yaşam Koçu">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2 class="section-title">Seninle Neler Yapabilirsin?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Günlük Yazma</h3>
+                    <p>Düşüncelerini, duygularını ve deneyimlerini huzurlu bir ortamda paylaş.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Duygu Analizi</h3>
+                    <p>Yazılarının duygusal içeriğini analiz et ve duygu dağılımını görselleştir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>AI Koç Desteği</h3>
+                    <p>Kişiselleştirilmiş yorumlar ve destekleyici mesajlarla duygusal rehberlik al.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Farkındalık Egzersizleri</h3>
+                    <p>Duygusal durumuna özel meditasyon ve nefes egzersizleriyle kendini geliştir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Sesli Günlük</h3>
+                    <p>Yazmak yerine konuşarak düşüncelerini aktarabilirsin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Anlık Destek</h3>
+                    <p>Acil durumlar için hızlı duygusal destek ve sakinleştirici egzersizler.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="about" class="how-it-works">
+            <h2 class="section-title">Nasıl Çalışır?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Günlüğünü Yaz veya Konuş</h3>
+                    <p>Günlük yazma alanımızda düşüncelerini paylaş veya mikrofon özelliği ile konuşarak içini dök.</p>
+                    <img src="images/step1.png" alt="Günlük yazma">
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Duygu Analizini Gör</h3>
+                    <p>Yapay zeka, yazını analiz ederek duygusal durumunu görselleştirir ve sana geri bildirim sağlar.</p>
+                    <img src="images/step2.png" alt="Duygu analizi">
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Kişiselleştirilmiş Öneriler Al</h3>
+                    <p>Duygusal durumuna uygun olarak, yapay zeka koçun sana özel egzersizler ve tavsiyeler sunar.</p>
+                    <img src="images/step3.png" alt="Kişiselleştirilmiş öneriler">
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Gelişimini Takip Et</h3>
+                    <p>Zaman içindeki duygusal değişimlerini grafikler ve raporlarla görüntüle, ilerleme kaydet.</p>
+                    <img src="images/step4.png" alt="Gelişim takibi">
+                </div>
+            </div>
+        </section>
+
+        <!-- Coach Selection Section -->
+        <section class="coach-selection">
+            <h2 class="section-title">Kendine Uygun Koçunu Seç</h2>
+            <p class="section-description">Farklı karakterde yapay zeka koçlar arasından kendine en uygun olanı seç.</p>
+            <div class="coach-grid">
+                <div class="coach-card">
+                    <img src="images/coach1.png" alt="Şefkatli koç">
+                    <h3>Şefkatli</h3>
+                    <p>Anlayışlı ve merhametli bir yaklaşımla seni dinler ve destekler.</p>
+                    <button class="btn btn-coach">Seç</button>
+                </div>
+                <div class="coach-card">
+                    <img src="images/coach2.png" alt="Disiplinli koç">
+                    <h3>Disiplinli</h3>
+                    <p>Hedefe odaklı ve yapılandırılmış bir yaklaşımla motivasyon sağlar.</p>
+                    <button class="btn btn-coach">Seç</button>
+                </div>
+                <div class="coach-card">
+                    <img src="images/coach3.png" alt="Mizahi koç">
+                    <h3>Mizahi</h3>
+                    <p>Espri anlayışı yüksek, hafif ve eğlenceli bir yaklaşım sunar.</p>
+                    <button class="btn btn-coach">Seç</button>
+                </div>
+                <div class="coach-card">
+                    <img src="images/coach4.png" alt="Spiritüel koç">
+                    <h3>Spiritüel</h3>
+                    <p>Farkındalık ve iç huzur odaklı bir yaklaşımla rehberlik eder.</p>
+                    <button class="btn btn-coach">Seç</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title">Kullanıcılarımız Ne Diyor?</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"Seninle uygulaması sayesinde duygusal durumumun farkına vardım ve daha dengeli bir ruh haline kavuştum. AI koçum bana her gün motivasyon sağlıyor."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="Kullanıcı 1">
+                        <div>
+                            <h4>Ayşe Y.</h4>
+                            <p>3 aydır kullanıyor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"Günlük yazma alışkanlığını hiç edinememiştim, ancak Seninle'nin kullanıcı dostu arayüzü ve AI koçumun yönlendirmeleriyle artık her gün düşüncelerimi paylaşıyorum."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="Kullanıcı 2">
+                        <div>
+                            <h4>Mehmet K.</h4>
+                            <p>6 aydır kullanıyor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"Sesli günlük özelliği benim için mükemmel! İş çıkışı trafikte bile düşüncelerimi paylaşabiliyorum. Duygu analizi raporları sayesinde kendimi daha iyi tanıdım."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user3.jpg" alt="Kullanıcı 3">
+                        <div>
+                            <h4>Zeynep A.</h4>
+                            <p>2 aydır kullanıyor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Duygusal Yolculuğuna Şimdi Başla</h2>
+                <p>Günlük yazmanın ve kişisel gelişimin yapay zeka ile desteklendiği bu benzersiz deneyime sen de katıl.</p>
+                <button class="btn btn-cta">Ücretsiz Dene</button>
+            </div>
+        </section>
+
+        <!-- Login Modal -->
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Giriş Yap</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">E-posta</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Şifre</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                    <div class="alternative-login">
+                        <p>Veya şununla giriş yap:</p>
+                        <button type="button" class="btn btn-google">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                    </div>
+                    <div class="form-footer">
+                        <p>Şifreni mi unuttun? <a href="#">Şifremi Sıfırla</a></p>
+                        <p>Hesabın yok mu? <a href="#" id="signup-link">Kayıt Ol</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Kayıt Ol</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Ad Soyad</label>
+                        <input type="text" id="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">E-posta</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Şifre</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Şifre Tekrar</label>
+                        <input type="password" id="signup-confirm-password" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="terms-check" required>
+                        <label for="terms-check">Kullanım Koşullarını ve Gizlilik Politikasını kabul ediyorum</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+                    <div class="alternative-login">
+                        <p>Veya şununla kayıt ol:</p>
+                        <button type="button" class="btn btn-google">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                    </div>
+                    <div class="form-footer">
+                        <p>Zaten bir hesabın var mı? <a href="#" id="login-link">Giriş Yap</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Seninle</h2>
+                <p>AI Yaşam Koçu ve Günlük Terapist</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Ürün</h3>
+                    <ul>
+                        <li><a href="#features">Özellikler</a></li>
+                        <li><a href="#about">Nasıl Çalışır</a></li>
+                        <li><a href="#">Fiyatlandırma</a></li>
+                        <li><a href="#">SSS</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Şirket</h3>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Yasal</h3>
+                    <ul>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Koşulları</a></li>
+                        <li><a href="#">Çerez Politikası</a></li>
+                        <li><a href="#">KVKK</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter" id="contact">
+                <h3>Bültenimize Abone Ol</h3>
+                <p>Yenilikler ve içgörülerden haberdar olmak için kaydol.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="E-posta adresin">
+                    <button type="submit" class="btn btn-newsletter">Abone Ol</button>
+                </form>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Seninle. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
